@@ -19,3 +19,11 @@
 	- A user cannot deposit more than $10,000 in a single transaction.
 
 Addl Notes: Do not worry about other banking system functionalities such as login/logout/security etc. for the purpose of this exercise.
+
+
+# Nick's Personal Notes During the test
+   - I started by creating the api. I decided I am currently most familiar with C# and dot net right now so thats what i went with.
+   - I created the api with a BankAccountController containing 2 methods. 1 being Deposit and the other as Withdraw.
+	- I took careful note of the above business requirements as not to miss any.
+	- Ended up making a validate transaction Method thatt has a good amount of if statements in it. I am confident with my logic but will have to make sure with my upcoming test cases. The things I wanted to ensure were: the user cant deposit more than 10k in one transaction.. so 9999.99 is ok but 10k is not. The user cant withdraw more than 90% of what their account balance at once. and they cant have less than 100 bucks at any time.
+- Total time taken to create and upload this to github - 35 minutes
