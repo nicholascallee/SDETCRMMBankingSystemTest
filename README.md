@@ -34,4 +34,6 @@ Addl Notes: Do not worry about other banking system functionalities such as logi
    - I looked through the given document again and noticed something i may have missed last time. It says "A user can deposit and withdraw money from account X" which leads me to believe that any user can add or remove any amount of money (within the given limitations) to anyone elses account.
        - In a real case scenario I would double check with the business person to ensure this is what they meant.
     
-- Reworking the Business Logic now.
+- Reworking the Business Logic now. --- The current logic takes a transaction request from anyone and executes it. From my perspective it seems no linking between the user and a particular bank account is made here but since the additional notes mention to not worry about login and logout I will assume this is good enough.
+
+- 
