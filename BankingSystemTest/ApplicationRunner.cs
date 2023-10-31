@@ -1,40 +1,28 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Configuration;
-using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Mvc.Testing;
+using RadancyTest;
+using Microsoft.VisualStudio.TestPlatform.TestHost;
 
 namespace BankingSystemTest
 {
     public class ApplicationRunner
     {
+
+        private readonly WebApplicationFactory<Program> _factory;  // Assuming your startup class is named "Startup"
+
+        public HttpClient client { get; private set; }
         public IConfiguration Configuration { get; private set; }
 
 
-        public ApplicationRunner(IWebHostEnvironment env)
-        {
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(env.ContentRootPath)
-                .AddJsonFile("appsettings.Test.json", optional: true, reloadOnChange: true);
-
-            Configuration = builder.Build();
-        }
-
-        public IServiceCollection ConfigureServices(IServiceCollection services)
+        public ApplicationRunner()
         {
 
-
-            // Connection string retrieval
-            var connectionString = Configuration.GetConnectionString("DefaultConnection");
-
-
-            // If you encounter issues with logging, you can register the default logging services.
-            services.AddLogging();
-
-            // Register DBInitializer
-
-            return services;
-
+            _factory = new WebApplicationFactory<Program>();
+            var client = _factory.CreateClient();
+            
 
         }
+
     }
 
 }
