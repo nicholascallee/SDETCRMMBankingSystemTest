@@ -36,4 +36,13 @@ Addl Notes: Do not worry about other banking system functionalities such as logi
     
 - Reworking the Business Logic now. --- The current logic takes a transaction request from anyone and executes it. From my perspective it seems no linking between the user and a particular bank account is made here but since the additional notes mention to not worry about login and logout I will assume this is good enough.
 
-- 
+   - Now that im finished:
+   - I did not get a test to pass, but i did come very close.
+   - I had trouble getting the application to run and make its api calls available before the test runs.
+   - My tests consisted of a test for withdraw and a test for deposit.
+   - 	As the api returns the user that had the item changed, thats what i looked at to validate. I think with more time i would have also ensured that the underlying data structure behind it was successfully changed.
+   - 	I was able to format my tests in gherkin with specflow.
+   - 	Future testing would also include: more test values. can the user deposit negitive money?? (based on the business requirements its ok), can money be added to a fake account? Availablity testing? is it working at all times? load testing? how many requests can it handle?
+
+
+As for setting up the test to run, i think another way i could have got around this is if my testing was completely seperated from my program. I could have ran the program and then the test seperately. I am assuming in a banking scenario, it would be available 24/7
