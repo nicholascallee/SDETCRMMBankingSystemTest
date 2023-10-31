@@ -27,3 +27,11 @@ Addl Notes: Do not worry about other banking system functionalities such as logi
 	- I took careful note of the above business requirements as not to miss any.
 	- Ended up making a validate transaction Method thatt has a good amount of if statements in it. I am confident with my logic but will have to make sure with my upcoming test cases. The things I wanted to ensure were: the user cant deposit more than 10k in one transaction.. so 9999.99 is ok but 10k is not. The user cant withdraw more than 90% of what their account balance at once. and they cant have less than 100 bucks at any time.
 - Total time taken to create and upload this to github - 35 minutes
+
+
+## part 2 notes
+
+   - I looked through the given document again and noticed something i may have missed last time. It says "A user can deposit and withdraw money from account X" which leads me to believe that any user can add or remove any amount of money (within the given limitations) to anyone elses account.
+       - In a real case scenario I would double check with the business person to ensure this is what they meant.
+    
+- Reworking the Business Logic now.
